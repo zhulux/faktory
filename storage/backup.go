@@ -11,7 +11,8 @@ const (
 	// Assume hourly backups and keep a day's worth.
 	// If we take backups every 5 minutes, this will keep
 	// two hours worth.
-	DefaultKeepBackupsCount int = 24
+        // retention 2
+	DefaultKeepBackupsCount int = 2
 )
 
 func (store *rocksStore) PurgeOldBackups(keepCount int) error {
